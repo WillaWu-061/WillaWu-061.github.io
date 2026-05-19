@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,10 @@
   <!-- Font Awesome 图标 -->
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- 手绘风格字体 -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Patrick+Hand:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Patrick+Hand:wght@400;700&display=swap"
+    rel="stylesheet">
+
   <!-- 自定义 Tailwind 配置 -->
   <script>
     tailwind.config = {
@@ -51,6 +55,7 @@
       }
     }
   </script>
+
   <style type="text/tailwindcss">
     @layer utilities {
       .content-auto {
@@ -69,6 +74,7 @@
       .font-patrick.font-bold {
         font-weight: 700; /* Patrick Hand 粗体更粗 */
       }
+      
       /* 涂鸦底纹背景 */
       .graffiti-bg {
         background-image: 
@@ -85,6 +91,7 @@
         background-repeat: repeat;
         background-size: 100px 100px, 100% 100%;
       }
+      
       /* 手绘边框效果 - 增强交互体验 */
       .sketch-border {
         border: 3px solid #1A535C;
@@ -102,6 +109,7 @@
         transform: translate(-1px, -1px); /* 阻尼回弹效果 */
         transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* 阻尼曲线 */
       }
+      
       /* 作品卡片特殊效果 */
       .project-card {
         transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -130,6 +138,7 @@
         box-shadow: 2px 2px 0px #1A535C;
         transition: all 0.15s cubic-bezier(0.68, -0.55, 0.27, 1.55);
       }
+      
       /* 手绘线条下划线 */
       .sketch-underline {
         position: relative;
@@ -174,6 +183,7 @@
       .animate-bounce-light {
         animation: bounce-light 3s ease-in-out infinite;
       }
+      
       /* 手绘图片效果 - 增强交互 */
       .sketch-img {
         filter: contrast(1.1) brightness(1.05);
@@ -219,6 +229,7 @@
         transform: rotate(-20deg) scale(1.2);
         opacity: 1;
       }
+      
       /* 图片轮播样式 */
       .image-carousel {
         position: relative;
@@ -274,6 +285,7 @@
         background-color: #4ECDC4;
         transform: scale(1.2);
       }
+      
       .carousel-video {
         width: 100%;
         border: 3px solid #1A535C;
@@ -338,7 +350,9 @@
     }
   </style>
 </head>
+
 <!-- 主背景添加涂鸦底纹 -->
+
 <body class="font-nunito bg-sketch1 text-sketch2 scroll-smooth graffiti-bg">
   <!-- 导航栏 → 草图风圆润边框 + 手绘阴影 -->
   <header id="navbar" class="fixed w-full top-0 left-0 z-50 bg-sketch1/95 backdrop-blur-sm transition-all py-2">
@@ -379,28 +393,33 @@
       <!-- 修改：头像容器从 w-40 h-40 改为 w-56 h-56 (移动端) / md:w-64 md:h-64 (桌面端) -->
       <div class="w-56 h-56 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden sketch-border mb-8 bg-white p-2">
         <!-- 头像添加手绘效果 -->
-        <img src="myphoto.jpg" alt="吴彦霖的头像" class="w-full h-full object-cover rounded-full sketch-img">
+        <img src="myphoto.JPG" alt="吴彦霖的头像" class="w-full h-full object-cover rounded-full sketch-img"
+          onerror="this.src='https://placehold.co/400x400/FF6B6B/FFFFFF?text=Willa'">
       </div>
       <h1 class="text-[clamp(2rem,5vw,4rem)] font-patrick font-bold mb-6 leading-tight graffiti-dot">
         👋你好，我是 <span class="text-primary sketch-underline">吴彦霖</span>
       </h1>
       <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 font-patrick font-semibold">
-        杭州师范大学汉语言文学  大三在读 | 爱学新东西，也爱写个不停 ✏️
+        杭州师范大学汉语言文学 大三在读 | 爱学新东西，也爱写个不停 ✏️
       </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="#portfolio" class="px-8 py-3 bg-sketch3 sketch-border sketch-btn text-sketch2 font-patrick text-lg font-bold hover:bg-yellow-300">
+        <a href="#portfolio"
+          class="px-8 py-3 bg-sketch3 sketch-border sketch-btn text-sketch2 font-patrick text-lg font-bold hover:bg-yellow-300">
           查看作品
         </a>
-        <a href="#contact" class="px-8 py-3 bg-white sketch-border sketch-btn text-sketch2 font-patrick text-lg font-bold hover:bg-gray-100">
+        <a href="#contact"
+          class="px-8 py-3 bg-white sketch-border sketch-btn text-sketch2 font-patrick text-lg font-bold hover:bg-gray-100">
           联系我
         </a>
       </div>
       <div class="mt-16 flex justify-center gap-8 text-3xl">
         <!-- 社交图标草图风 -->
-        <a href="javascript:void(0)" title="微信：Willa09425" class="text-sketch2 hover:text-primary transition-colors sketch-border sketch-btn p-3 rounded-full">
+        <a href="javascript:void(0)" title="微信：Willa09425"
+          class="text-sketch2 hover:text-primary transition-colors sketch-border sketch-btn p-3 rounded-full">
           <i class="fa fa-weixin"></i>
         </a>
-        <a href="mailto:Willing09425@163.com" class="text-sketch2 hover:text-primary transition-colors sketch-border sketch-btn p-3 rounded-full">
+        <a href="mailto:Willing09425@163.com"
+          class="text-sketch2 hover:text-primary transition-colors sketch-border sketch-btn p-3 rounded-full">
           <i class="fa fa-envelope"></i>
         </a>
       </div>
@@ -418,18 +437,18 @@
         <div class="order-2 md:order-1">
           <h3 class="text-2xl font-patrick font-bold mb-6 text-primary graffiti-dot">我的故事 ✨</h3>
           <p class="mb-6 leading-relaxed font-patrick text-lg font-semibold">
-  学的是中文师范，却偏爱“跨界”探索。大一暑假，我在UCLA的课堂里和社会学专业的同学一起讨论亚裔歧视话题，也用镜头完成了一部15分钟的音乐短片——那是我第一次意识到，文字之外，影像和跨文化视角同样能讲好故事。
-         </p>
-         <p class="mb-6 leading-relaxed font-patrick text-lg font-semibold">
-        
-  回到国内，我钻进浙江村镇，和课题组一起寻访方言使用者，用IPA记音、做语料库，想把那些正在消逝的乡音“搬”进数字博物馆。田野调查让我明白，好的内容需要俯下身去听、去录、去验证。
-         </p>
-         <p class="mb-6 leading-relaxed font-patrick text-lg font-semibold">
-  后来，我去了杭州日报经济部实习，跑新闻、写推文，从时令鲜蔬到时尚趋势，每一篇稿子都是一次快速学习。
-         </p>
-         <p class="mb-8 leading-relaxed font-patrick text-lg font-semibold">
-  现在，我在校安教融媒体中心带着30多人的团队做内容，突发推文的响应时间缩短了30%，原创稿的阅读点赞也慢慢涨了上去。排球场上我是院队的一员，生活中我滑雪、游泳、弹琴——保持好奇，保持手感，持续成长。 
-         </p>
+            学的是中文师范，却偏爱“跨界”探索。大一暑假，我在UCLA的课堂里和社会学专业的同学一起讨论亚裔歧视话题，也用镜头完成了一部15分钟的音乐短片——那是我第一次意识到，文字之外，影像和跨文化视角同样能讲好故事。
+          </p>
+          <p class="mb-6 leading-relaxed font-patrick text-lg font-semibold">
+
+            回到国内，我钻进浙江村镇，和课题组一起寻访方言使用者，用IPA记音、做语料库，想把那些正在消逝的乡音“搬”进数字博物馆。田野调查让我明白，好的内容需要俯下身去听、去录、去验证。
+          </p>
+          <p class="mb-6 leading-relaxed font-patrick text-lg font-semibold">
+            后来，我去了杭州日报经济部实习，跑新闻、写推文，从时令鲜蔬到时尚趋势，每一篇稿子都是一次快速学习。
+          </p>
+          <p class="mb-8 leading-relaxed font-patrick text-lg font-semibold">
+            现在，我在校安教融媒体中心带着30多人的团队做内容，突发推文的响应时间缩短了30%，原创稿的阅读点赞也慢慢涨了上去。排球场上我是院队的一员，生活中我滑雪、游泳、弹琴——保持好奇，保持手感，持续成长。
+          </p>
           <div class="grid grid-cols-2 gap-4 mb-8 font-patrick">
             <div class="flex items-center gap-3 sketch-border sketch-btn p-3 bg-white">
               <i class="fa fa-check text-secondary text-xl"></i>
@@ -448,13 +467,15 @@
               <span class="text-lg font-bold">跨文化交际</span>
             </div>
           </div>
-          <a href="mycv.pdf" download class="px-8 py-3 bg-primary sketch-border sketch-btn text-white font-patrick text-lg font-bold hover:bg-red-500">
+          <a href="mycv.pdf" download
+            class="px-8 py-3 bg-primary sketch-border sketch-btn text-white font-patrick text-lg font-bold hover:bg-red-500">
             下载简历
           </a>
         </div>
         <div class="order-1 md:order-2">
           <!-- 照片添加手绘效果 -->
-          <img src="myphoto2.jpg" alt="吴彦霖的日常" class="sketch-img w-full">
+          <img src="myphoto2.jpg" alt="吴彦霖的日常" class="sketch-img w-full"
+            onerror="this.src='https://placehold.co/600x800/4ECDC4/FFFFFF?text=Willa+Life'">
         </div>
       </div>
     </div>
@@ -464,7 +485,8 @@
   <section id="portfolio" class="py-24 px-4 graffiti-bg-dark">
     <div class="container mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-patrick font-bold mb-4 sketch-underline inline-block graffiti-dot">图文作品</h2>
+        <h2 class="text-4xl md:text-5xl font-patrick font-bold mb-4 sketch-underline inline-block graffiti-dot">图文作品
+        </h2>
         <p class="font-patrick text-lg text-sketch2/80 mt-4 font-semibold">用图文传递美好 💫</p>
       </div>
 
@@ -473,70 +495,80 @@
         <div class="sketch-border project-card bg-white/90 p-1 overflow-hidden cursor-pointer" onclick="openModal(0)">
           <div class="p-6">
             <div class="h-56 overflow-hidden mb-4">
-              <img src="xiumituisong3.jpg" alt="图文制作 （推送/海报）" class="sketch-img w-full h-full object-cover">
+              <img src="xiumituisong3.jpg" alt="图文制作 （推送/海报）" class="sketch-img w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x400/FF6B6B/FFFFFF?text=Design'">
             </div>
-            <h3 class="text-2xl font-patrick font-bold mb-3 text-sketch2 sketch-underline inline-block">图文制作 （推送/海报）</h3>
-            <p class="font-patrick text-lg mb-4 text-sketch2/80 font-semibold">使用135、秀米编辑器、可画、稿定设计等先后为校内外文娱、安全部门以及文广公司制作推送图文与海报。</p>
-            <span class="text-sm bg-sketch3 text-sketch2 px-4 py-2 rounded-full font-patrick border-2 border-sketch2 font-bold cursor-pointer" onclick="event.stopPropagation(); openModal(0)">推送图文/海报制作</span>
+            <h3 class="text-2xl font-patrick font-bold mb-3 text-sketch2 sketch-underline inline-block">图文制作 （推送/海报）
+            </h3>
+            <p class="font-patrick text-lg mb-4 text-sketch2/80 font-semibold">
+              使用135、秀米编辑器、可画、稿定设计等先后为校内外文娱、安全部门以及文广公司制作推送图文与海报。</p>
+            <span
+              class="text-sm bg-sketch3 text-sketch2 px-4 py-2 rounded-full font-patrick border-2 border-sketch2 font-bold cursor-pointer"
+              onclick="event.stopPropagation(); openModal(0)">推送图文/海报制作</span>
           </div>
         </div>
         <!-- 作品2：草图风格卡片 -->
         <div class="sketch-border project-card bg-white/90 p-1 overflow-hidden cursor-pointer" onclick="openModal(1)">
           <div class="p-6">
             <div class="h-56 overflow-hidden mb-4">
-              <img src="https://picsum.photos/600/400?random=2" alt="文学作品分析" class="sketch-img w-full h-full object-cover">
+              <img src="xinwenfengmian.png" alt="新闻稿撰写" class="sketch-img w-full h-full object-cover">
             </div>
-            <h3 class="text-2xl font-patrick font-bold mb-3 text-sketch2 sketch-underline inline-block">新闻稿与策划案撰写</h3>
-            <p class="font-patrick text-lg mb-4 text-sketch2/80 font-semibold">独立完成市民消费端新闻采、写、编、摄；为校内文娱、安全组织撰写活动策划案。</p>
-            <span class="text-sm bg-sketch3 text-sketch2 px-4 py-2 rounded-full font-patrick border-2 border-sketch2 font-bold cursor-pointer" onclick="event.stopPropagation(); openModal(1)">新闻稿/策划案</span>
+            <h3 class="text-2xl font-patrick font-bold mb-3 text-sketch2 sketch-underline inline-block">新闻稿撰写</h3>
+            <p class="font-patrick text-lg mb-4 text-sketch2/80 font-semibold">
+              独立完成市民消费端新闻采、写、编、摄。以下为部分公开发表的新闻稿件（上方为纸媒版面，下方可点击阅读原文）</p>
+            <span
+              class="text-sm bg-sketch3 text-sketch2 px-4 py-2 rounded-full font-patrick border-2 border-sketch2 font-bold cursor-pointer"
+              onclick="event.stopPropagation(); openModal(1)">新闻稿</span>
           </div>
         </div>
-        <!-- ====================== 第三个作品卡片 ====================== -->
+        <!-- ====================== 第三个作品卡片：活动策划案 ====================== -->
         <div class="sketch-border project-card bg-white/90 p-1 overflow-hidden cursor-pointer" onclick="openModal(2)">
           <div class="p-6">
             <div class="h-56 overflow-hidden mb-4">
-              <img src="https://picsum.photos/600/400?random=3" alt="文字创作作品集" class="sketch-img w-full h-full object-cover">
+              <!-- 建议：这里换成您策划案封面的截图 -->
+              <img src="cehuaanfengmian.png" alt="活动策划案" class="sketch-img w-full h-full object-cover">
             </div>
-            <h3 class="text-2xl font-patrick font-bold mb-3 text-sketch2 sketch-underline inline-block">海报制作</h3>
-            <p class="font-patrick text-lg mb-4 text-sketch2/80 font-semibold">通过可灵、即梦、nano banana辅助，优化提示词生成精美图片。</p>
-            <span class="text-sm bg-sketch3 text-sketch2 px-4 py-2 rounded-full font-patrick border-2 border-sketch2 font-bold cursor-pointer" onclick="event.stopPropagation(); openModal(2)">原创文学</span>
+            <h3 class="text-2xl font-patrick font-bold mb-3 text-sketch2 sketch-underline inline-block">活动策划案撰写</h3>
+            <p class="font-patrick text-lg mb-4 text-sketch2/80 font-semibold">
+              协助撰写多项活动策划方案。参与前期调研、核心环节设计、相关部门联络与应急预案设计，全方位把控活动落地细节。</p>
+            <span
+              class="text-sm bg-sketch3 text-sketch2 px-4 py-2 rounded-full font-patrick border-2 border-sketch2 font-bold cursor-pointer"
+              onclick="event.stopPropagation(); openModal(2)">策划方案</span>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <!-- 新增：独立视频展示专区 -->
   <section id="video-works" class="py-24 px-4 graffiti-bg-dark">
     <div class="container mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-patrick font-bold mb-4 sketch-underline inline-block graffiti-dot">音视频作品</h2>
+        <h2 class="text-4xl md:text-5xl font-patrick font-bold mb-4 sketch-underline inline-block graffiti-dot">音视频作品
+        </h2>
         <p class="font-patrick text-lg text-sketch2/80 mt-4 font-semibold">用影音展示生活 🎬</p>
       </div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-       <!-- 视频作品1 -->
-<div class="video-works-card">
-  <h3 class="text-2xl font-patrick font-bold mb-4 text-sketch2 sketch-underline inline-block">微课视频制作</h3>
-  <!-- 优化后的 Bilibili 视频嵌入代码 -->
-  <iframe 
-    src="https://player.bilibili.com/player.html?isOutside=true&aid=116595779305770&bvid=BV1V7LP6GEQx&cid=38428999842&p=1&high_quality=1&danmaku=0" 
-    scrolling="no" 
-    border="0" 
-    frameborder="no" 
-    framespacing="0" 
-    allowfullscreen="true" 
-    class="w-full aspect-video rounded-lg shadow-md mb-4">
-</iframe>
-  
-  <p class="font-patrick text-lg text-sketch2/90 font-semibold">AI赋能教学微课制作，通过小组合作，用大语言模型完成前期课堂设计，以PPT为底板，即梦、豆包等AI工具制作视频动画素材，苏诺之音等创作bgm，完成10分钟微课。</p>
-</div>
+        <!-- 视频作品1 -->
+        <div class="video-works-card">
+          <h3 class="text-2xl font-patrick font-bold mb-4 text-sketch2 sketch-underline inline-block">微课视频制作</h3>
+          <!-- 优化后的 Bilibili 视频嵌入代码 -->
+          <iframe
+            src="https://player.bilibili.com/player.html?isOutside=true&aid=116595779305770&bvid=BV1V7LP6GEQx&cid=38428999842&p=1&high_quality=1&danmaku=0"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+            class="w-full aspect-video rounded-lg shadow-md mb-4">
+          </iframe>
+
+          <p class="font-patrick text-lg text-sketch2/90 font-semibold">
+            AI赋能教学微课制作，通过小组合作，用大语言模型完成前期课堂设计，以PPT为底板，即梦、豆包等AI工具制作视频动画素材，苏诺之音等创作bgm，完成10分钟微课。</p>
+        </div>
 
         <!-- 视频作品2 -->
         <div class="video-works-card">
           <h3 class="text-2xl font-patrick font-bold mb-4 text-sketch2 sketch-underline inline-block">风格音乐制作</h3>
           <video class="section-video mb-4" controls poster="m3.jpg">
             <source src="mymusic.MP4" type="video/mp4">
-            
           </video>
           <p class="font-patrick text-lg text-sketch2/90 font-semibold">优化提示词，利用Gemini创作爵士风格音乐。</p>
         </div>
@@ -548,7 +580,8 @@
   <section id="skills" class="py-24 px-4">
     <div class="container mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-patrick font-bold mb-4 sketch-underline inline-block graffiti-dot">专业技能</h2>
+        <h2 class="text-4xl md:text-5xl font-patrick font-bold mb-4 sketch-underline inline-block graffiti-dot">专业技能
+        </h2>
         <p class="font-patrick text-lg text-sketch2/80 mt-4 font-semibold">我的能力值 📊</p>
       </div>
       <div class="grid md:grid-cols-2 gap-12">
@@ -587,7 +620,7 @@
           <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">新闻采编</span>
           <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">推送制作</span>
           <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">视频剪辑</span>
-<span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">公众号运营</span>
+          <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">公众号运营</span>
           <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">雅思7.0 (28.5/36)</span>
           <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">CET4、CET6 550+</span>
           <span class="px-6 py-3 bg-white sketch-border sketch-btn text-xl font-bold">计算机二级</span>
@@ -607,13 +640,15 @@
       </div>
       <div class="grid md:grid-cols-2 gap-12">
         <div>
-          <h3 class="text-2xl font-patrick font-bold mb-6 text-primary sketch-underline inline-block graffiti-dot">找到我</h3>
+          <h3 class="text-2xl font-patrick font-bold mb-6 text-primary sketch-underline inline-block graffiti-dot">找到我
+          </h3>
           <p class="mb-8 font-patrick text-lg leading-relaxed font-semibold">
-          若有作品相关未尽疑问，请与我联系～ 
+            若有作品相关未尽疑问，请留下姓名，随时与我联系～
           </p>
           <div class="space-y-6 font-patrick">
             <div class="flex items-start gap-4 sketch-border sketch-btn p-4 bg-white/90">
-              <div class="w-12 h-12 rounded-full bg-sketch3 flex items-center justify-center text-sketch2 text-xl flex-shrink-0">
+              <div
+                class="w-12 h-12 rounded-full bg-sketch3 flex items-center justify-center text-sketch2 text-xl flex-shrink-0">
                 <i class="fa fa-map-marker"></i>
               </div>
               <div>
@@ -622,7 +657,8 @@
               </div>
             </div>
             <div class="flex items-start gap-4 sketch-border sketch-btn p-4 bg-white/90">
-              <div class="w-12 h-12 rounded-full bg-sketch3 flex items-center justify-center text-sketch2 text-xl flex-shrink-0">
+              <div
+                class="w-12 h-12 rounded-full bg-sketch3 flex items-center justify-center text-sketch2 text-xl flex-shrink-0">
                 <i class="fa fa-envelope"></i>
               </div>
               <div>
@@ -631,7 +667,8 @@
               </div>
             </div>
             <div class="flex items-start gap-4 sketch-border sketch-btn p-4 bg-white/90">
-              <div class="w-12 h-12 rounded-full bg-sketch3 flex items-center justify-center text-sketch2 text-xl flex-shrink-0">
+              <div
+                class="w-12 h-12 rounded-full bg-sketch3 flex items-center justify-center text-sketch2 text-xl flex-shrink-0">
                 <i class="fa fa-phone"></i>
               </div>
               <div>
@@ -642,18 +679,26 @@
           </div>
         </div>
         <!-- 草图风格表单 -->
-        <form class="sketch-border bg-white/90 p-8 font-patrick">
-          <h3 class="text-2xl font-bold mb-6 text-sketch2 sketch-underline inline-block graffiti-dot">发送消息</h3>
+        <!-- 移除了 onsubmit="event.preventDefault();"，加入了 action 和 method -->
+        <form action="https://formspree.io/f/xpqnwoga" method="POST" class="sketch-border bg-white/90 p-8 font-patrick">
           <div class="mb-6">
-            <input type="text" placeholder="您的姓名" class="w-full px-5 py-4 bg-sketch1 border-2 border-sketch2 rounded-xl focus:outline-none focus:border-primary text-lg transition-colors placeholder:text-sketch2/60 sketch-btn font-semibold">
+            <!-- 加入了 name="name" 和 required -->
+            <input type="text" name="name" required placeholder="您的姓名"
+              class="w-full px-5 py-4 bg-sketch1 border-2 border-sketch2 rounded-xl focus:outline-none focus:border-primary text-lg transition-colors placeholder:text-sketch2/60 sketch-btn font-semibold">
           </div>
           <div class="mb-6">
-            <input type="email" placeholder="您的邮箱" class="w-full px-5 py-4 bg-sketch1 border-2 border-sketch2 rounded-xl focus:outline-none focus:border-primary text-lg transition-colors placeholder:text-sketch2/60 sketch-btn font-semibold">
+            <!-- 加入了 name="email" 和 required -->
+            <input type="email" name="email" required placeholder="您的邮箱"
+              class="w-full px-5 py-4 bg-sketch1 border-2 border-sketch2 rounded-xl focus:outline-none focus:border-primary text-lg transition-colors placeholder:text-sketch2/60 sketch-btn font-semibold">
           </div>
           <div class="mb-8">
-            <textarea placeholder="您想对我说的话" class="w-full px-5 py-4 bg-sketch1 border-2 border-sketch2 rounded-xl focus:outline-none focus:border-primary text-lg transition-colors placeholder:text-sketch2/60 sketch-btn" rows="5"></textarea>
+            <!-- 加入了 name="message" 和 required -->
+            <textarea name="message" required placeholder="您想对我说的话"
+              class="w-full px-5 py-4 bg-sketch1 border-2 border-sketch2 rounded-xl focus:outline-none focus:border-primary text-lg transition-colors placeholder:text-sketch2/60 sketch-btn"
+              rows="5"></textarea>
           </div>
-          <button type="submit" class="w-full py-4 bg-primary sketch-border sketch-btn text-white text-xl font-bold hover:bg-red-500">
+          <button type="submit"
+            class="w-full py-4 bg-primary sketch-border sketch-btn text-white text-xl font-bold hover:bg-red-500">
             发送消息 ✨
           </button>
         </form>
@@ -666,13 +711,23 @@
     <div class="sketch-border bg-white/95 max-w-3xl w-full max-h-[90vh] overflow-y-auto p-2">
       <div class="p-6">
         <div class="flex justify-between items-center mb-6">
-          <h3 id="modalTitle" class="text-3xl font-patrick font-bold sketch-underline inline-block graffiti-dot">作品详情</h3>
-          <button onclick="closeModal()" class="text-3xl text-sketch2 hover:text-primary transition-colors sketch-btn p-2">&times;</button>
+          <h3 id="modalTitle" class="text-3xl font-patrick font-bold sketch-underline inline-block graffiti-dot">作品详情
+          </h3>
+          <button onclick="closeModal()"
+            class="text-3xl text-sketch2 hover:text-primary transition-colors sketch-btn p-2">&times;</button>
         </div>
-        
+
         <!-- 多图片轮播容器 -->
-        <div id="carouselContainer" class="image-carousel mb-6">
-          <img id="modalImg" src="" alt="作品详情" class="sketch-img w-full">
+        <div id="carouselContainer" class="image-carousel mb-6 group">
+          <!-- 改动：增加了 cursor-zoom-in，以及 onclick 触发全屏大图预览 -->
+          <img id="modalImg" src="" alt="作品详情" class="sketch-img w-full cursor-zoom-in" title="点击查看高清大图"
+            onerror="this.src='https://placehold.co/600x400/FF6B6B/FFFFFF?text=Image'" onclick="openLightbox()">
+          <!-- 放大提示的小图标（鼠标悬浮时显示在右上角） -->
+          <div
+            class="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <i class="fa fa-search-plus"></i>
+          </div>
+
           <!-- 轮播导航按钮 -->
           <div class="carousel-nav">
             <button class="carousel-btn left-btn sketch-btn" onclick="changeImage(-1)">
@@ -685,15 +740,37 @@
           <!-- 轮播指示器 -->
           <div id="carouselDots" class="carousel-dots"></div>
         </div>
-        
+
         <p id="modalDesc" class="font-patrick text-xl leading-relaxed mb-6 text-sketch2/90 font-semibold"></p>
-        <span id="modalTag" class="text-lg bg-sketch3 text-sketch2 px-6 py-2 rounded-full font-patrick border-2 border-sketch2 sketch-btn font-bold"></span>
+
+        <!-- 文章外链按钮容器 -->
+        <div id="modalLinks" class="flex flex-col gap-3 mb-6 hidden"></div>
+
+        <!-- 附件下载按钮容器 -->
+        <div id="modalDownloads" class="flex flex-col gap-3 mb-6 hidden"></div>
+
+        <span id="modalTag"
+          class="text-lg bg-sketch3 text-sketch2 px-6 py-2 rounded-full font-patrick border-2 border-sketch2 sketch-btn font-bold"></span>
       </div>
     </div>
   </div>
 
+  <!-- 新增：全屏大图预览 (Lightbox) -->
+  <div id="lightbox"
+    class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+    onclick="closeLightbox()">
+    <!-- 关闭按钮 -->
+    <button
+      class="absolute top-4 right-4 md:top-8 md:right-8 text-white text-4xl hover:text-primary transition-colors z-10 w-12 h-12 flex items-center justify-center">&times;</button>
+    <!-- 图片本体：加入缩放过渡效果 -->
+    <img id="lightboxImg" src="" alt="全屏大图"
+      class="max-w-[95vw] max-h-[90vh] object-contain sketch-border bg-white p-1 md:p-2 transform scale-95 transition-transform duration-300 shadow-2xl"
+      onclick="event.stopPropagation();">
+  </div>
+
   <!-- 回到顶部 → 草图风按钮 -->
-  <button id="backToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-primary sketch-border sketch-btn text-white rounded-full flex items-center justify-center text-2xl opacity-0 invisible z-40 hover:bg-red-500">
+  <button id="backToTop"
+    class="fixed bottom-8 right-8 w-14 h-14 bg-primary sketch-border sketch-btn text-white rounded-full flex items-center justify-center text-2xl opacity-0 invisible z-40 hover:bg-red-500">
     <i class="fa fa-arrow-up"></i>
   </button>
 
@@ -701,7 +778,8 @@
   <footer class="bg-sketch2 text-white py-12 border-t-4 border-primary">
     <div class="container mx-auto px-4 text-center">
       <div class="flex justify-center gap-8 text-3xl mb-6">
-        <a href="javascript:void(0)" title="微信：Willa09425" class="hover:text-sketch3 transition-colors sketch-btn p-2 rounded-full">
+        <a href="javascript:void(0)" title="微信：Willa09425"
+          class="hover:text-sketch3 transition-colors sketch-btn p-2 rounded-full">
           <i class="fa fa-weixin"></i>
         </a>
         <a href="mailto:Willing09425@163.com" class="hover:text-sketch3 transition-colors sketch-btn p-2 rounded-full">
@@ -717,12 +795,12 @@
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) { 
-        navbar.classList.add('sketch-border', 'mx-4', 'mt-2', 'rounded-2xl'); 
-        backToTop.classList.remove('opacity-0','invisible'); 
-      } else { 
-        navbar.classList.remove('sketch-border', 'mx-4', 'mt-2', 'rounded-2xl'); 
-        backToTop.classList.add('opacity-0','invisible'); 
+      if (window.scrollY > 50) {
+        navbar.classList.add('sketch-border', 'mx-4', 'mt-2', 'rounded-2xl');
+        backToTop.classList.remove('opacity-0', 'invisible');
+      } else {
+        navbar.classList.remove('sketch-border', 'mx-4', 'mt-2', 'rounded-2xl');
+        backToTop.classList.add('opacity-0', 'invisible');
       }
     });
 
@@ -741,13 +819,14 @@
     const modalTitle = document.getElementById('modalTitle');
     const modalImg = document.getElementById('modalImg');
     const modalDesc = document.getElementById('modalDesc');
+    const modalLinks = document.getElementById('modalLinks'); // 新增获取外链容器
     const modalTag = document.getElementById('modalTag');
     const carouselDots = document.getElementById('carouselDots');
-    
+
     // 当前选中的作品索引和图片索引
     let currentProjectIndex = 0;
     let currentImageIndex = 0;
-    
+
     const projects = [
       {
         title: "图文制作（推送/海报）",
@@ -755,39 +834,49 @@
         images: [
           "xiumituisong.jpg",
           "xiumituisong2.jpg",
-          "wodehaibao1.jpg"
+          "wodehaibao1.jpg",
+          "aihaibao.png",
+          "aihaibao2.png"
         ],
-        desc: "为不同类型的公众号内容撰写文案并排版，运用SVG与壹伴等各类组件、插件制作推送图文；利用可画等设计网站与AI辅助，为部门活动制作宣传海报",
+        desc: "为不同类型的公众号内容撰写文案并排版，运用SVG与壹伴等各类组件、插件制作推送图文；利用可画等设计网站与AI辅助，为部门活动制作宣传海报。",
         tag: "推送图文/海报制作"
       },
       {
-        title: "新闻稿与策划案撰写",
-        // 多张图片数组
+        title: "新闻稿撰写",
+        // 多张图片数组：建议此处替换为4篇纸质报纸的实拍图或版面截图
         images: [
-          "https://picsum.photos/600/400?random=20",
-          "https://picsum.photos/600/400?random=21",
-          "https://picsum.photos/600/400?random=22",
-          "https://picsum.photos/600/400?random=23"
+          "xinwengao20260416.png",
+          "xinwengao20260417.png",
+          "xinwengao20260427.png",
+          "xinwengao20260519.png"
         ],
-        desc: "针对现当代文学经典作品的深度解读与评论写作，结合文本细读与时代背景分析，形成完整的评论体系与独特的观点表达。",
-        tag: "新闻稿/策划案"
+        desc: "独立完成市民消费端新闻采、写、编、摄。以下为部分公开发表的新闻稿件（上方为纸媒版面，下方可点击阅读原文）：",
+        tag: "新闻稿",
+        // 新增 articles 数组，用于自动生成在线阅读的外链按钮
+        articles: [
+          { title: "🔗 稿件一：价格回落，尝鲜正当时，一年只卖一个月的本地寒豆儿抢鲜上市", url: "https://mdaily.hangzhou.com.cn/mrsb/2026/04/16/article_detail_3_20260416A054.html" },
+          { title: "🔗 稿件二：换季催热杭城衣橱收纳服务，订单量同比涨幅超两成", url: "https://mdaily.hangzhou.com.cn/mrsb/2026/04/17/article_detail_3_20260417A111.html" },
+          { title: "🔗 稿件三：社媒讨论度破亿，波点元素焕亮春夏街头", url: "https://mdaily.hangzhou.com.cn/mrsb/2026/04/27/article_detail_3_20260427A064.html" },
+          { title: "🔗 稿件四：从“好看”进阶“好穿”，芭蕾风鞋履今夏强势“破圈”", url: "https://mdaily.hangzhou.com.cn/mrsb/2026/05/19/article_detail_3_20260519A056.html" }
+        ]
       },
-
       {
-        title: "文字创作作品集",
-        // 可无限添加图片，支持多图轮播
+        title: "活动策划方案",
+        // 建议：把策划案的最精彩的几页截图放在这里轮播
         images: [
-          "https://picsum.photos/600/400?random=3",
-          "https://picsum.photos/600/400?random=31",
-          "https://picsum.photos/600/400?random=32",
-          "https://picsum.photos/600/400?random=33"
+          "1.png",
+          "2.png",
+          "3.png"
         ],
-        desc: "原创散文、现代诗歌、短篇故事等文学作品创作，融合汉语言文学专业素养与个人创作风格，展现文字的美感与力量。",
-        tag: "原创文学"
+        desc: "协助老师完成安全教育相关线上/线下活动策划，根据初稿独立撰写活动策划案。（点击下方按钮可下载完整策划案）",
+        tag: "策划方案",
+        // 新增 downloads 数组，用于生成下载附件的按钮
+        downloads: [
+          { title: "📄 下载《415安全教育日外场活动策划案》.pdf", url: "415.pdf" },
+          { title: "📄 下载《“心系国安，创意筑安”安全教育作品征集大赛策划案》.pdf", url: "cyza.pdf" }
+        ]
       }
-     ];
-
-  
+    ];
 
     // 生成轮播指示器
     function generateCarouselDots(imagesLength) {
@@ -806,7 +895,7 @@
       if (index >= 0 && index < project.images.length) {
         currentImageIndex = index;
         modalImg.src = project.images[currentImageIndex];
-        
+
         // 更新指示器状态
         const dots = carouselDots.querySelectorAll('.carousel-dot');
         dots.forEach((dot, i) => {
@@ -819,14 +908,14 @@
     function changeImage(direction) {
       const project = projects[currentProjectIndex];
       let newIndex = currentImageIndex + direction;
-      
+
       // 循环切换
       if (newIndex < 0) {
         newIndex = project.images.length - 1;
       } else if (newIndex >= project.images.length) {
         newIndex = 0;
       }
-      
+
       showImage(newIndex);
     }
 
@@ -834,16 +923,50 @@
     function openModal(index) {
       currentProjectIndex = index;
       currentImageIndex = 0;
-      
+
       const project = projects[index];
       modalTitle.textContent = project.title;
       modalImg.src = project.images[0]; // 显示第一张图
       modalDesc.textContent = project.desc;
       modalTag.textContent = project.tag;
-      
+
+      // 修复Bug：动态渲染外链按钮逻辑
+      if (project.articles && project.articles.length > 0) {
+        modalLinks.innerHTML = ''; // 清空旧内容
+        project.articles.forEach(article => {
+          const link = document.createElement('a');
+          link.href = article.url;
+          link.target = "_blank"; // 强制在新标签页打开，避免跳出作品集
+          link.className = "block w-full text-left px-5 py-3 bg-sketch1 border-2 border-sketch2 sketch-border sketch-btn text-sketch2 text-lg font-bold hover:bg-sketch3 transition-colors truncate";
+          link.innerHTML = article.title;
+          modalLinks.appendChild(link);
+        });
+        modalLinks.classList.remove('hidden');
+      } else {
+        // 如果没有链接数据，则隐藏该区域
+        modalLinks.classList.add('hidden');
+      }
+
+      // 新增：动态渲染附件下载按钮逻辑
+      const modalDownloads = document.getElementById('modalDownloads');
+      if (project.downloads && project.downloads.length > 0) {
+        modalDownloads.innerHTML = ''; // 清空旧内容
+        project.downloads.forEach(file => {
+          const btn = document.createElement('a');
+          btn.href = file.url;
+          btn.download = ""; // 触发下载属性
+          btn.className = "flex justify-between items-center w-full px-5 py-3 bg-primary/10 border-2 border-primary sketch-border sketch-btn text-primary text-lg font-bold hover:bg-primary hover:text-white transition-colors";
+          btn.innerHTML = `<span>${file.title}</span> <i class="fa fa-download"></i>`;
+          modalDownloads.appendChild(btn);
+        });
+        modalDownloads.classList.remove('hidden');
+      } else {
+        modalDownloads.classList.add('hidden');
+      }
+
       // 生成轮播指示器
       generateCarouselDots(project.images.length);
-      
+
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
@@ -852,6 +975,33 @@
     function closeModal() {
       modal.classList.add('hidden');
       document.body.style.overflow = 'auto';
+    }
+
+    // --- 新增：全屏大图预览(Lightbox)逻辑 ---
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox() {
+      // 把当前轮播图的源地址赋给全屏大图
+      lightboxImg.src = modalImg.src;
+
+      // 开启毛玻璃背景并淡入
+      lightbox.classList.remove('opacity-0', 'pointer-events-none');
+      lightbox.classList.add('opacity-100', 'pointer-events-auto');
+
+      // 图片稍微放大，形成弹出感
+      lightboxImg.classList.remove('scale-95');
+      lightboxImg.classList.add('scale-100');
+    }
+
+    function closeLightbox() {
+      // 渐隐毛玻璃背景
+      lightbox.classList.remove('opacity-100', 'pointer-events-auto');
+      lightbox.classList.add('opacity-0', 'pointer-events-none');
+
+      // 图片缩小回弹
+      lightboxImg.classList.remove('scale-100');
+      lightboxImg.classList.add('scale-95');
     }
 
     // 点击弹窗外部关闭
@@ -872,4 +1022,5 @@
     });
   </script>
 </body>
+
 </html>
